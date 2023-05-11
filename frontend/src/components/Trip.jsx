@@ -14,8 +14,6 @@ function Trip() {
 
       if (isVisible) {
         scrollBox.classList.add(`${style.active}`);
-      } else {
-        scrollBox.classList.remove(`${style.active}`);
       }
     });
   });
@@ -43,6 +41,7 @@ function Trip() {
           src="https://en.normandie-tourisme.fr/wp-content/uploads/sites/3/2020/01/8118-Mont-Saint-Michel-couleur-dautomne-%C2%A9-DaLiu-Shutterstock.com-%C2%A9-DaLiu-Shutterstock.com_.jpg"
           alt=""
         />
+        <h2>Mon Gros Titre</h2>
         <p
           className={`scroll ${style.text} ${style.hiddenText} ${
             visibleText ? style["visible-text"] : ""
