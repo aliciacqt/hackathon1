@@ -1,3 +1,4 @@
+import RoadTrip from "@pages/RoadTrip";
 import "./App.css";
 import Carousel from "./components/carousel";
 import Header from "./components/Header";
@@ -7,6 +8,7 @@ function App() {
     <div className="App">
       <Carousel />
       <Header />
+      <RoadTrip />
     </div>
   );
 }
