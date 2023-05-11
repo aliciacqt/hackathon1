@@ -1,5 +1,7 @@
+import { Link } from "react-router-dom";
 import React, { useState } from "react";
 import images from "../data/ImageData";
+
 import "./carousel.scss";
 
 function Carousel() {
@@ -64,11 +66,13 @@ function Carousel() {
       <div id="carousel">
         {images.map((image, index) => (
           <div key={image.id} className={getClassName(index)}>
-            <img
-              src={image.imageCar}
-              width={index === selected ? 400 : 200}
-              alt={image.destination}
-            />
+            <Link to="/roadtrip">
+              <img
+                src={image.imageCar}
+                width={index === selected ? 400 : 200}
+                alt={image.destination}
+              />
+            </Link>
           </div>
         ))}
         <div className="hideLeft">
