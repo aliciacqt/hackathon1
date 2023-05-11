@@ -1,14 +1,16 @@
-import RoadTrip from "./pages/RoadTrip";
-import "./App.css";
+import "./App.scss";
+// import Form from "./components/Form";
+// import RoadTrip from "./pages/RoadTrip";
 import Carousel from "./components/carousel";
 import Header from "./components/Header";
 
 function App() {
   return (
     <div className="App">
-      <Carousel />
       <Header />
-      <RoadTrip />
+      <Carousel />
+      {/* <RoadTrip />
+      <Form /> */}
     </div>
   );
 }
