@@ -1,24 +1,25 @@
+import { Routes, Route } from "react-router-dom";
 import "./App.scss";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
+// import Form from "./components/Form";
 import RoadTrip from "./pages/RoadTrip";
-import Suggestions from "./pages/Suggestions";
 import Carousel from "./components/carousel";
 import Header from "./components/Header";
-import Footer from "./components/Footer";
+// import Suggestions from "./pages/Suggestions";
 
 function App() {
   return (
-    <Router>
-      <div className="App">
-        <Header />
-        <Carousel />
-        <RoadTrip />
-        <Routes>
-          <Route path="/suggestions" element={<Suggestions />} />
-        </Routes>
-        <Footer />
-      </div>
-    </Router>
+    <main className="App">
+      <Header />
+      <Carousel />
+      {/* <RoadTrip />
+      <Form /> */}
+      <Routes>
+        {/* <Route path="/suggestions" element={<Suggestions />} /> */}
+        <Route path="/roadtrip" element={<RoadTrip />} />
+      </Routes>
+    </main>
+
   );
 }
 

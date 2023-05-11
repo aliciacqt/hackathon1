@@ -1,4 +1,4 @@
-import Trip from "@components/Trip";
+import Trip from "../components/Trip";
 
 function RoadTrip() {
   return <Trip />;
