@@ -1,11 +1,13 @@
+import "./Presentation.css";
+
 export default function Presentation() {
   return (
     <div>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-        commodo consequat.
+      <p className="p-4 text-2xl m-2 text-blue text-center leading-8 presentation ">
+        Bienvenue sur mon site Internet dédié à mes vacances! Préparez-vous à
+        vous évader virtuellement vers des destinations exotiques, à vous
+        imprégner de cultures fascinantes et à vous laisser inspirer par la
+        beauté du monde. Bonne découverte !
       </p>
     </div>
   );
