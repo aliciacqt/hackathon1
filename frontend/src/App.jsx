@@ -2,8 +2,9 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
 import "./App.scss";
 import RoadTrip from "./pages/RoadTrip";
-import Carousel from "./components/carousel";
 import Suggestions from "./pages/Suggestions";
+import Carousel from "./components/carousel";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Routes>
           <Route path="/suggestions" element={<Suggestions />} />
         </Routes>
+        <Footer />
       </div>
     </Router>
   );
