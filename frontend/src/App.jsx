@@ -1,13 +1,13 @@
-import Carousel from "@components/carousel";
-import Home from "./pages/Home";
 
+import Carousel from "@components/carousel";
 import "./App.css";
+import Header from "./components/Header";
 
 function App() {
   return (
     <div className="App">
-      <Home />
       <Carousel />
+      <Header />
     </div>
   );
 }
