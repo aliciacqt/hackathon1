@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import style from "@components/Trip.module.scss";
+import Map from "./MapApi";
 
 function Trip() {
   const scrollBoxes = document.querySelectorAll(".scroll");
@@ -57,11 +58,7 @@ function Trip() {
         </p>
       </article>
       <article>
-        <img
-          className={style.map}
-          src="https://storage.googleapis.com/pod_public/1300/104603.jpg"
-          alt=""
-        />
+        <Map position={[48.858093, 2.2946944]} className={style.map} />
         <p
           className={`scroll ${style.text} ${style.hiddenText} ${
             visibleText ? style["visible-text"] : ""

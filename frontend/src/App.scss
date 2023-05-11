@@ -1,5 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  background-color: var(--color-main);
+  // background: radial-gradient(circle, rgba(246,224,202,1) 24%, rgba(255,255,255,1) 100%);
+  font-family: var(--text-font);
+}
+
+:root {
+  --color-main: #f6e0ca;
+  --color-secondary: #64a1b1;
+  --color-title: #c77a4f;
+  --color-details: #d8a477;
+  --big-title-font: "Ultra";
+  --title-font: "Aladin";
+  --text-font: "Instrument Sans";
 }
