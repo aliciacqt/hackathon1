@@ -1,14 +1,9 @@
-import Home from "./pages/Home";
+import Form from "./components/Form";
 
-import "./App.css";
+import "./App.scss";
 
 function App() {
-  return (
-    <div className="App">
-      <Home />
-      <p>coucou</p>
-    </div>
-  );
+  return <Form />;
 }
 
 export default App;
