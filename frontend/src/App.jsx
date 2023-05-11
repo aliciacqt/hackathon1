@@ -1,3 +1,4 @@
+import RoadTrip from "@pages/RoadTrip";
 import "./App.css";
 import Carousel from "@components/carousel";
 import Map from "@components/MapApi";
@@ -9,6 +10,7 @@ function App() {
       <Carousel />
       <Header />
       <Map position={[48.858093, 2.2946944]} />
+      <RoadTrip />
     </div>
   );
 }
