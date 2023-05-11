@@ -1,18 +1,18 @@
+import Header from "./components/Header";
 import "./App.scss";
 // import Form from "./components/Form";
-// import RoadTrip from "./pages/RoadTrip";
+import RoadTrip from "./pages/RoadTrip";
 import Carousel from "./components/carousel";
-import Header from "./components/Header";
 import Presentation from "./components/Presentation";
 
 function App() {
   return (
-    <div className="App">
+    <div>
       <Header />
       <Presentation />
       <Carousel />
-      {/* <RoadTrip />
-      <Form /> */}
+      <RoadTrip />
+      {/* <Form /> */}
     </div>
   );
 }
