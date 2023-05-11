@@ -78,10 +78,10 @@ function Carousel() {
 
       <div className="buttons">
         <button type="button" id="prev" onClick={() => moveToSelected("prev")}>
-          Prev
+          Next
         </button>
         <button type="button" id="next" onClick={() => moveToSelected("next")}>
-          Next
+          Prev
         </button>
       </div>
     </main>

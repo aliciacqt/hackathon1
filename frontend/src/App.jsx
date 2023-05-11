@@ -1,6 +1,7 @@
 import "./App.scss";
 // import Form from "./components/Form";
 // import RoadTrip from "./pages/RoadTrip";
+import Trip from "@components/Trip";
 import Carousel from "./components/carousel";
 import Header from "./components/Header";
 
@@ -9,8 +10,9 @@ function App() {
     <div className="App">
       <Header />
       <Carousel />
-      {/* <RoadTrip />
-      <Form /> */}
+      {/* <RoadTrip /> */}
+      {/* <Form /> */}
+      <Trip />
     </div>
   );
 }

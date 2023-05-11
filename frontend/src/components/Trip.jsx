@@ -36,7 +36,7 @@ function Trip() {
   }, []);
 
   return (
-    <div className={style.main}>
+    <div>
       <article>
         <img
           src="https://en.normandie-tourisme.fr/wp-content/uploads/sites/3/2020/01/8118-Mont-Saint-Michel-couleur-dautomne-%C2%A9-DaLiu-Shutterstock.com-%C2%A9-DaLiu-Shutterstock.com_.jpg"
