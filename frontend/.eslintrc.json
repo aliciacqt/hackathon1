@@ -38,7 +38,8 @@
       2,
       { "namedComponents": ["arrow-function", "function-declaration"] }
     ],
-    "react/jsx-props-no-spreading": "off"
+    "react/jsx-props-no-spreading": "off",
+    "jsx-a11y/alt-text": "off"
   },
   "settings": {
     "import/resolver": {
