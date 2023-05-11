@@ -1,11 +1,12 @@
+import RoadTrip from "@pages/RoadTrip";
 import Home from "./pages/Home";
-
-import "./App.css";
+import "./App.scss";
 
 function App() {
   return (
-    <div className="App">
+    <div>
       <Home />
+      <RoadTrip />
       <p>coucou</p>
     </div>
   );
