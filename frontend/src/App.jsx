@@ -1,17 +1,22 @@
 import "./App.scss";
-// import Form from "./components/Form";
-// import RoadTrip from "./pages/RoadTrip";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import RoadTrip from "./pages/RoadTrip";
 import Carousel from "./components/carousel";
 import Header from "./components/Header";
+import Suggestions from "./pages/Suggestions";
 
 function App() {
   return (
-    <div className="App">
-      <Header />
-      <Carousel />
-      {/* <RoadTrip />
-      <Form /> */}
-    </div>
+    <Router>
+      <div className="App">
+        <Header />
+        <Carousel />
+        <RoadTrip />
+        <Routes>
+          <Route path="/suggestions" element={<Suggestions />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
