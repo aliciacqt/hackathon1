@@ -1,5 +1,6 @@
 import { Routes, Route } from "react-router-dom";
 import "./App.scss";
+
 // import Form from "./components/Form";
 import RoadTrip from "./pages/RoadTrip";
 import Carousel from "./components/carousel";
@@ -18,6 +19,7 @@ function App() {
         <Route path="/roadtrip" element={<RoadTrip />} />
       </Routes>
     </main>
+
   );
 }
 
