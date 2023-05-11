@@ -30,8 +30,15 @@ export default function Form() {
 
   return (
     <>
+      {isSubmitted && (
+        <p className="text-center bg-darksand text-ligthsand w-full mt-6 p-6">
+          Merci pour votre suggestion, à bientôt pour une prochaine idée de
+          voyage !
+        </p>
+      )}
+
       <container className="flex justify-center">
-        <form className="flex flex-col items-center w-4/5 m-6">
+        <form className="flex flex-col items-center w-4/5 m-6 pb-8">
           <p className="text-center mb-2">Vos suggestions</p>
           <input
             name="userName"
@@ -61,7 +68,7 @@ export default function Form() {
             required
           />
           <button
-            className="bg-blue m-2 mt-4 w-1/2 shadow-[2px_4px_0px_-0px] shadow-sand text-ligthsand"
+            className="bg-blue m-2 mt-4 pt-1 pb-1 w-1/2 shadow-[2px_4px_0px_-0px] shadow-sand text-ligthsand"
             type="button"
             onClick={handleSubmit}
           >
@@ -69,13 +76,6 @@ export default function Form() {
           </button>
         </form>
       </container>
-
-      {isSubmitted && (
-        <p className="text-center bg-darksand text-ligthsand w-full p-6">
-          Merci pour votre suggestion, à bientôt pour une prochaine idée de
-          voyage !
-        </p>
-      )}
     </>
   );
 }
