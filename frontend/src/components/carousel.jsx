@@ -1,17 +1,18 @@
 import React, { useState } from "react";
+import images from "../data/ImageData";
 import "./carousel.scss";
 
 function Carousel() {
   const [selected, setSelected] = useState(3); // index of initially selected item
-  const images = [
-    "https://i1.sndcdn.com/artworks-000165384395-rhrjdn-t500x500.jpg",
-    "https://i1.sndcdn.com/artworks-000185743981-tuesoj-t500x500.jpg",
-    "https://i1.sndcdn.com/artworks-000158708482-k160g1-t500x500.jpg",
-    "https://i1.sndcdn.com/artworks-000062423439-lf7ll2-t500x500.jpg",
-    "https://i1.sndcdn.com/artworks-000028787381-1vad7y-t500x500.jpg",
-    "https://i1.sndcdn.com/artworks-000108468163-dp0b6y-t500x500.jpg",
-    "https://i1.sndcdn.com/artworks-000064920701-xrez5z-t500x500.jpg",
-  ];
+  // const images = [
+  //   "/src/assets/photos/japoncar.jpg",
+  //   "/src/assets/photos/svalbardcar.jpg",
+  //   "/src/assets/photos/morbihancar.jpg",
+  //   "/src/assets/photos/edimbourgcar.jpg",
+  //   "/src/assets/photos/route66.jpg",
+  //   "/src/assets/photos/japon1.jpg",
+  //   "/src/assets/photos/svalbard1.jpg",
+  // ];
 
   const moveToSelected = (element) => {
     let selectedIndex;
@@ -61,15 +62,12 @@ function Carousel() {
   return (
     <main>
       <div id="carousel">
-        {images.map((imageUrl) => (
-          <div
-            key={imageUrl}
-            className={getClassName(images.indexOf(imageUrl))}
-          >
+        {images.map((image, index) => (
+          <div key={image.id} className={getClassName(index)}>
             <img
-              src={imageUrl}
-              width={images.indexOf(imageUrl) === selected ? 400 : 200}
-              alt={`${images.indexOf(imageUrl) + 1}`}
+              src={image.imageCar}
+              width={index === selected ? 400 : 200}
+              alt={image.destination}
             />
           </div>
         ))}
