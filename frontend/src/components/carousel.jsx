@@ -61,6 +61,7 @@ function Carousel() {
 
   return (
     <main>
+      {/* <Link to={`/trip/${id}`}> */}
       <div id="carousel">
         {images.map((image, index) => (
           <div key={image.id} className={getClassName(index)}>
@@ -75,7 +76,7 @@ function Carousel() {
           <img src={images[images.length - 1]} width={200} />
         </div>
       </div>
-
+      {/* </Link> */}
       <div className="buttons">
         <button type="button" id="prev" onClick={() => moveToSelected("prev")}>
           Prev

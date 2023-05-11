@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import style from "@components/Trip.module.scss";
 import Map from "./MapApi";
-import HolidaysApi from "./HolidaysApi";
 
 function Trip() {
   const scrollBoxes = document.querySelectorAll(".scroll");
@@ -75,7 +74,10 @@ function Trip() {
         </p>
       </article>
       <article>
-        <HolidaysApi />
+        <img
+          src="https://content.r9cdn.net/rimg/dimg/5d/59/6342cb35-city-45202-16b23d45341.jpg?crop=true&width=1366&height=768&xhint=1912&yhint=1817"
+          alt=""
+        />
         <p
           className={`scroll ${style.text} ${style.hiddenText} ${
             (visibleText, visibleTextPc ? style["visible-text-pc"] : "")
