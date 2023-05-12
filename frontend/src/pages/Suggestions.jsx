@@ -23,9 +23,7 @@ export default function Suggestions() {
           className="w-5/12"
         />
       </section>
-      <section>
-        <p className="m-6">-----Ici la map d'Hawaï-----</p>
-      </section>
+
       <center>
         <hr className="w-4/5 text-darksand" />
       </center>

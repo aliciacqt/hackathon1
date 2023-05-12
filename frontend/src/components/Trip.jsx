@@ -24,7 +24,7 @@ function Trip() {
   const [visibleText, setVisibleText] = useState(false);
 
   useEffect(() => {
-    window.addEventListener("load", () => {
+    window.addEventListener("scroll", () => {
       setVisibleText(true);
     });
   }, []);
@@ -32,7 +32,7 @@ function Trip() {
   const [visibleTextPc, setVisibleTextPc] = useState(false);
 
   useEffect(() => {
-    window.addEventListener("load", () => {
+    window.addEventListener("scroll", () => {
       setVisibleTextPc(true);
     });
   }, []);
@@ -41,7 +41,7 @@ function Trip() {
     <div className={style.main}>
       <article>
         <img src={ImageData[0].image1} alt={ImageData[0].destination} />
-        <h2>Mon Gros Titre</h2>
+        <h2>Japon</h2>
         <p
           className={`scroll ${style.text} ${style.hiddenText} ${
             visibleText ? style["visible-text"] : ""
@@ -51,14 +51,8 @@ function Trip() {
         </p>
       </article>
       <section className="map-container">
-        <Map position={[48.858093, 2.2946944]} />
-        <p
-          className={`scroll ${style.text} ${style.hiddenText} ${
-            visibleText ? style["visible-text"] : ""
-          }`}
-        >
-          {ImageData[0].texte}
-        </p>
+        <Map position={[35.6895, 139.69171]} />
+        <h2 className=" font-bold p-2">LA CARTE INTERACTIVE DU JAPON :</h2>
       </section>
       <article>
         <img

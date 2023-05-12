@@ -55,6 +55,7 @@
       transition: 0.3s;
       transition-delay: 0.2s;
       z-index: 0;
+      font-family: "Instrument Sans";
     }
 
     .active {
@@ -80,10 +81,10 @@
       h2 {
         position: absolute;
         display: flex;
-        right: 10%;
-        font-size: 30px;
+        right: 20%;
+        font-size: 3em;
         color: #c77a4f;
-        font-family: "Ultra";
+        font-family: "Aladin";
       }
 
       .weather {
@@ -91,9 +92,6 @@
         width: clamp(300px, 100%, 600px);
         height: clamp(300px, 100%, 375px);
         box-shadow: none;
-      }
-
-      .text-weather {
       }
     }
 
