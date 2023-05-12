@@ -27,6 +27,20 @@
       z-index: 1;
     }
 
+    .weather {
+      position: relative;
+      width: clamp(124px, 100%, 100px);
+      height: clamp(300px, 100%, 375px);
+      box-shadow: none;
+    }
+
+    .text-weather {
+      text-align: center;
+      color: #64a1b1;
+      font-family: Aladin;
+      font-size: 30px;
+    }
+
     h2 {
       display: none;
     }
@@ -53,9 +67,16 @@
       transition-delay: 0.2s;
     }
   }
+  article:last-child {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
   @media screen and (min-width: 768px) {
     article {
       display: flex;
+      width: 100%;
       h2 {
         position: absolute;
         display: flex;
@@ -64,6 +85,20 @@
         color: #c77a4f;
         font-family: "Ultra";
       }
+
+      .weather {
+        position: relative;
+        width: clamp(300px, 100%, 600px);
+        height: clamp(300px, 100%, 375px);
+        box-shadow: none;
+      }
+
+      .text-weather {
+      }
+    }
+
+    article:last-child {
+      align-items: flex-start;
     }
 
     article:nth-child(odd) {
