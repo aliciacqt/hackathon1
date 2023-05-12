@@ -1,7 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 import { useEffect } from "react";
 import "./App.scss";
-import Presentation from "@components/Presentation";
+import Presentation from "./components/Presentation";
 // import Form from "./components/Form";
 import RoadTrip from "./pages/RoadTrip";
 import Suggestions from "./pages/Suggestions";

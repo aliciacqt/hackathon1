@@ -55,7 +55,8 @@ function Carousel() {
 
   return (
     <main>
-      <section>
+      {/* ----------------- carousel version mobile ----------------- */}
+      <section className="md:hidden">
         {images.map((image) => (
           <div key={image.id}>
             <img
@@ -71,28 +72,30 @@ function Carousel() {
         ))}
       </section>
       {/* <Link to={`/trip/${id}`}> */}
-      <div id="carousel">
-        {images.map((image, index) => (
-          <div key={image.id} className={getClassName(index)}>
-            <img
-              className="max-sm:hidden"
-              src={image.imageCar}
-              width={index === selected ? 400 : 200}
-              alt={image.destination}
-            />
+      {/* ----------------- carousel version desktop ----------------- */}
+      <div className="w-full">
+        <div id="carousel">
+          {images.map((image, index) => (
+            <div key={image.id} className={getClassName(index)}>
+              <img
+                className="max-sm:hidden"
+                src={image.imageCar}
+                width={index === selected ? 400 : 200}
+                alt={image.destination}
+              />
 
-            <div className="flex justify-center  ">
-              <p className="bg-blue rounded-md p-2 md:opacity-30 hover:opacity-100 opacity-0 max-sm:hidden">
-                {image.texte4}
-              </p>
+              <div className="flex justify-center  ">
+                <p className="bg-blue rounded-md p-2 opacity-30 hover:opacity-100 max-sm:hidden">
+                  {image.texte4}
+                </p>
+              </div>
             </div>
+          ))}
+          <div className="hideLeft">
+            <img src={images[images.length - 1]} width={200} />
           </div>
-        ))}
-        <div className="hideLeft">
-          <img src={images[images.length - 1]} width={200} />
         </div>
       </div>
-
       {/* </Link> */}
       <div className="buttons">
         <button
