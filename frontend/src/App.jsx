@@ -19,7 +19,6 @@ function App() {
         <Route path="/roadtrip" element={<RoadTrip />} />
       </Routes>
     </main>
-
   );
 }
 
