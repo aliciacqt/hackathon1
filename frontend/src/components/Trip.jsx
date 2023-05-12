@@ -36,7 +36,7 @@ function Trip() {
   }, []);
 
   return (
-    <div>
+    <div className={style.main}>
       <article>
         <img
           src="https://en.normandie-tourisme.fr/wp-content/uploads/sites/3/2020/01/8118-Mont-Saint-Michel-couleur-dautomne-%C2%A9-DaLiu-Shutterstock.com-%C2%A9-DaLiu-Shutterstock.com_.jpg"
@@ -57,8 +57,8 @@ function Trip() {
           reprehenderit quis consectetur enim, earum cumque.
         </p>
       </article>
-      <article>
-        <Map position={[48.858093, 2.2946944]} className={style.map} />
+      <section className="map-container">
+        <Map position={[48.858093, 2.2946944]} />
         <p
           className={`scroll ${style.text} ${style.hiddenText} ${
             visibleText ? style["visible-text"] : ""
@@ -72,7 +72,7 @@ function Trip() {
           quibusdam veniam magnam nihil velit ullam modi? Repellendus maiores
           aut, voluptatum quasi adipisci at rem voluptate vero.
         </p>
-      </article>
+      </section>
       <article>
         <img
           src="https://content.r9cdn.net/rimg/dimg/5d/59/6342cb35-city-45202-16b23d45341.jpg?crop=true&width=1366&height=768&xhint=1912&yhint=1817"

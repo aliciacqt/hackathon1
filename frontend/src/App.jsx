@@ -5,6 +5,7 @@ import Suggestions from "./pages/Suggestions";
 import Carousel from "./components/carousel";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+// import MapTest from "@components/MapTest";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Footer />
       </div>
     </Router>
+    // <MapTest />
   );
 }
 

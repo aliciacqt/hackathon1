@@ -4,15 +4,7 @@ import "./carousel.scss";
 
 function Carousel() {
   const [selected, setSelected] = useState(3); // index of initially selected item
-  // const images = [
-  //   "/src/assets/photos/japoncar.jpg",
-  //   "/src/assets/photos/svalbardcar.jpg",
-  //   "/src/assets/photos/morbihancar.jpg",
-  //   "/src/assets/photos/edimbourgcar.jpg",
-  //   "/src/assets/photos/route66.jpg",
-  //   "/src/assets/photos/japon1.jpg",
-  //   "/src/assets/photos/svalbard1.jpg",
-  // ];
+  const [selectedImage, setSelectedImage] = useState(images[selected]);
 
   const moveToSelected = (element) => {
     let selectedIndex;
@@ -25,6 +17,7 @@ function Carousel() {
     }
 
     setSelected(selectedIndex);
+    setSelectedImage(images[selectedIndex]);
   };
   const getClassName = (index) => {
     if (index === selected) {
@@ -63,7 +56,22 @@ function Carousel() {
     <main>
       <div id="carousel">
         {images.map((image, index) => (
-          <div key={image.id} className={getClassName(index)}>
+          <div
+            key={image.id}
+            className={getClassName(index)}
+            role="button"
+            onClick={() => {
+              setSelected(index);
+              setSelectedImage(images[index]);
+            }}
+            onKeyDown={(event) => {
+              if (event.key === "Enter") {
+                setSelected(index);
+                setSelectedImage(images[index]);
+              }
+            }}
+            tabIndex="0"
+          >
             <img
               src={image.imageCar}
               width={index === selected ? 400 : 200}
@@ -83,6 +91,11 @@ function Carousel() {
         <button type="button" id="next" onClick={() => moveToSelected("next")}>
           Prev
         </button>
+      </div>
+
+      <div>
+        <h2>{selectedImage.destination}</h2>
+        <p>{selectedImage.description}</p>
       </div>
     </main>
   );
