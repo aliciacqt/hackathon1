@@ -74,7 +74,7 @@ function Carousel() {
       {/* <Link to={`/trip/${id}`}> */}
       {/* ----------------- carousel version desktop ----------------- */}
       <div className="w-full">
-        <div id="carousel">
+        <div className="absolute bottom-9" id="carousel">
           {images.map((image, index) => (
             <div key={image.id} className={getClassName(index)}>
               <img
@@ -113,9 +113,6 @@ function Carousel() {
           onClick={() => moveToSelected("next")}
         >
           Suivant
-        </button>
-        <button type="button" id="next" onClick={() => moveToSelected("next")}>
-          Prev
         </button>
       </div>
 
