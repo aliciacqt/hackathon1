@@ -10,6 +10,7 @@ import Header from "./components/Header";
 
 // import Suggestions from "./pages/Suggestions";
 import Footer from "./components/Footer";
+// import MapTest from "@components/MapTest";
 
 function App() {
   useEffect(() => {
