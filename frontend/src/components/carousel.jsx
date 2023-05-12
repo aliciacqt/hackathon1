@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import images from "../data/ImageData";
 
@@ -85,7 +84,7 @@ function Carousel() {
           <img src={images[images.length - 1]} width={200} />
         </div>
       </div>
-      
+
       <div className="buttons">
         <button type="button" id="prev" onClick={() => moveToSelected("prev")}>
           Next
