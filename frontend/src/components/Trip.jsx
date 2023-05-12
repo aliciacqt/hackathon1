@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import style from "@components/Trip.module.scss";
+import style from "./Trip.module.scss";
 import ImageData from "../data/ImageData";
 import Map from "./MapApi";
 
