@@ -24,9 +24,6 @@ export default function Suggestions() {
         />
       </section>
 
-      <center>
-        <hr className="w-4/5 text-darksand" />
-      </center>
       <Form />
     </div>
   );
