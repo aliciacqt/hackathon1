@@ -49,8 +49,8 @@ function Trip() {
           {ImageData[0].texte3}
         </p>
       </article>
-      <article>
-        <Map position={[48.858093, 2.2946944]} className={style.map} />
+      <section className="map-container">
+        <Map position={[48.858093, 2.2946944]} />
         <p
           className={`scroll ${style.text} ${style.hiddenText} ${
             visibleText ? style["visible-text"] : ""
@@ -58,7 +58,7 @@ function Trip() {
         >
           {ImageData[0].texte}
         </p>
-      </article>
+      </section>
       <article>
         <img src={ImageData[0].image2} alt={ImageData[0].destination} />
         <p

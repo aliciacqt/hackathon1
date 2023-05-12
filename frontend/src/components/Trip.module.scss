@@ -109,3 +109,39 @@
     }
   }
 }
+@media screen and (max-width: 767px) {
+  .main {
+    article {
+      img {
+        width: 100%;
+        height: auto;
+      }
+
+      .map {
+        width: 100%;
+        height: auto;
+      }
+
+      h2 {
+        display: block;
+        text-align: center;
+        font-size: 24px;
+        margin-bottom: 0.5em;
+      }
+
+      p {
+        transform: translateY(0px) scale(1);
+        margin-top: 0.5em;
+        border-radius: 5px;
+      }
+
+      .visible-text {
+        transform: translateY(0px);
+      }
+
+      .active {
+        transform: translateY(0px);
+      }
+    }
+  }
+}
