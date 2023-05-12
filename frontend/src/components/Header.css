@@ -5,12 +5,12 @@
 } */
 
 .navTitle {
-  @apply text-3xl font-medium justify-center;
+  /* @apply text-3xl font-medium justify-center;
   text-shadow: 2px 4px 9px rgba(0, 0, 0, 0.66);
   -webkit-animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.61, 0.355, 1)
     both;
   animation: tracking-in-expand 1.3s cubic-bezier(0.215, 0.61, 0.355, 1) both;
-  color: rgba(246, 224, 202, 1);
+  color: rgba(246, 224, 202, 1); */
   /* Jollydays */
 
   font-family: "Ultra";
@@ -19,7 +19,7 @@
 
   text-shadow: 2px 4px 0px #d8a477, 4px 8px 0px #c77a4f;
 }
-@-webkit-keyframes tracking-in-expand {
+/* @-webkit-keyframes tracking-in-expand {
   0% {
     letter-spacing: -0.5em;
     opacity: 0;
@@ -42,7 +42,7 @@
   100% {
     opacity: 1;
   }
-}
+} */
 .logoStyle {
   object-fit: cover;
 }
