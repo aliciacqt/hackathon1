@@ -1,25 +1,24 @@
 import { Routes, Route } from "react-router-dom";
 import "./App.scss";
 
-import Presentation from "@components/Presentation";
-// import Form from "./components/Form";
 import RoadTrip from "./pages/RoadTrip";
-import Carousel from "./components/carousel";
+import Suggestions from "./pages/Suggestions";
+import Presentation from "./components/Presentation";
+// import Carousel from "./components/carousel";
 import Header from "./components/Header";
-// import Suggestions from "./pages/Suggestions";
+import Footer from "./components/Footer";
 
 function App() {
   return (
     <main className="App">
       <Header />
-      <Presentation />
-      <Carousel />
-      {/* <RoadTrip />
-      <Form /> */}
+      {/* <Carousel /> */}
       <Routes>
-        {/* <Route path="/suggestions" element={<Suggestions />} /> */}
-        <Route path="/roadtrip" element={<RoadTrip />} />
+        <Route path="/" element={<Presentation />} />
+        <Route path="/roadtrip/trip/:id" element={<RoadTrip />} />
+        <Route path="/suggestions" element={<Suggestions />} />
       </Routes>
+      <Footer />
     </main>
   );
 }
