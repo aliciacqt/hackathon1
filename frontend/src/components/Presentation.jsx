@@ -1,3 +1,4 @@
+import Carousel from "./Carousel";
 import "./Presentation.css";
 
 export default function Presentation() {
@@ -9,6 +10,7 @@ export default function Presentation() {
         imprégner de cultures fascinantes et à vous laisser inspirer par la
         beauté du monde. Bonne découverte !
       </p>
+      <Carousel />
     </div>
   );
 }

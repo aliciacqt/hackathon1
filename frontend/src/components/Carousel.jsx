@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import images from "../data/ImageData";
 
-import "./carousel.scss";
+import "./Carousel.scss";
 
 function Carousel() {
   const [selected, setSelected] = useState(3); // index of initially selected item
