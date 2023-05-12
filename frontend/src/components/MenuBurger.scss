@@ -53,6 +53,7 @@ nav {
       border-radius: 1em;
       // box-shadow: inset 0px 0px 10px 10px #212121;
       background-color: rgba(100, 161, 177, 1);
+      transition: 0.3s;
     }
     li {
       display: flex;
@@ -88,6 +89,7 @@ nav {
   transform: translateX(0%) scale(100%);
   transition: all 0.8s ease-out;
   position: absolute;
+  top: 120px;
   left: 0;
   right: 0;
   z-index: 100;
