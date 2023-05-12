@@ -19,7 +19,7 @@ const BurgerMenu = () => {
     }
   };
   return (
-    <div>
+    <div className="bg-blue">
       <nav className="mt-4">
         <div
           className="burger-menu"
@@ -35,12 +35,12 @@ const BurgerMenu = () => {
       </nav>
       <div className={menuClass}>
         <ul>
-          <li>Japon</li>
-          <li>Route 66 </li>
-          <li>Edimbourgh</li>
-          <li>Svalbard</li>
-          <li>Golf du Morbihan</li>
-          <li> Mes prochaines vacances</li>
+          <li>🏯 Japon</li>
+          <li>🏙️ Route 66 </li>
+          <li>🏴󠁧󠁢󠁳󠁣󠁴󠁿 Edimbourgh</li>
+          <li>🐻‍❄️ Svalbard</li>
+          <li>𖣘 Golf du Morbihan</li>
+          <li> 🌴 Mes prochaines vacances</li>
           <li> Mes sites web de vacs</li>
           <li>
             {/* <Link onClick={updateMenu} onKeyDown={updateMenu} to="/planetes">
