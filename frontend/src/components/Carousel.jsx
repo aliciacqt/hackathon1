@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import images from "../data/ImageData";
 
-import "./carousel.scss";
+import "./Carousel.scss";
 
 function Carousel() {
   const [selected, setSelected] = useState(3); // index of initially selected item
@@ -55,29 +55,37 @@ function Carousel() {
 
   return (
     <main>
+      <section>
+        {images.map((image) => (
+          <div key={image.id}>
+            <img
+              className=" md:hidden p-3"
+              src={image.imageCar}
+              alt={image.destination}
+            />
+
+            <div className="flex justify-center p-2 mb-7 ">
+              <p className="md:hidden ">{image.texte4}</p>
+            </div>
+          </div>
+        ))}
+      </section>
+      {/* <Link to={`/trip/${id}`}> */}
       <div id="carousel">
         {images.map((image, index) => (
-          <div
-            key={image.id}
-            className={getClassName(index)}
-            role="button"
-            onClick={() => {
-              setSelected(index);
-              setSelectedImage(images[index]);
-            }}
-            onKeyDown={(event) => {
-              if (event.key === "Enter") {
-                setSelected(index);
-                setSelectedImage(images[index]);
-              }
-            }}
-            tabIndex="0"
-          >
+          <div key={image.id} className={getClassName(index)}>
             <img
+              className="max-sm:hidden"
               src={image.imageCar}
               width={index === selected ? 400 : 200}
               alt={image.destination}
             />
+
+            <div className="flex justify-center  ">
+              <p className="bg-blue rounded-md p-2 md:opacity-30 hover:opacity-100 opacity-0 max-sm:hidden">
+                {image.texte4}
+              </p>
+            </div>
           </div>
         ))}
         <div className="hideLeft">
@@ -85,9 +93,23 @@ function Carousel() {
         </div>
       </div>
 
+      {/* </Link> */}
       <div className="buttons">
-        <button type="button" id="prev" onClick={() => moveToSelected("prev")}>
-          Next
+        <button
+          className="mr-4 bg-blue rounded-md p-2 text-ligthsand max-sm:hidden"
+          type="button"
+          id="prev"
+          onClick={() => moveToSelected("prev")}
+        >
+          Précédent
+        </button>
+        <button
+          className="bg-blue rounded-md p-2 text-ligthsand max-sm:hidden"
+          type="button"
+          id="next"
+          onClick={() => moveToSelected("next")}
+        >
+          Suivant
         </button>
         <button type="button" id="next" onClick={() => moveToSelected("next")}>
           Prev
