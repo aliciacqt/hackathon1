@@ -5,6 +5,7 @@ nav {
   display: flex;
   padding: 1em;
   z-index: 3;
+  background-color: #64a1b1;
 }
 .burger-menu {
   height: 100%;
@@ -15,6 +16,7 @@ nav {
   justify-content: space-between;
   cursor: pointer;
   z-index: 5;
+  background-color: #64a1b1;
 }
 .burger-bar {
   width: 4em;
@@ -49,16 +51,21 @@ nav {
       border: 2px solid;
       border-color: rgb(13, 12, 11);
       border-radius: 1em;
-
       // box-shadow: inset 0px 0px 10px 10px #212121;
       background-color: rgba(100, 161, 177, 1);
+      transition: 0.3s;
     }
     li {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       position: relative;
       list-style: none;
       z-index: 4;
       margin: 1rem;
+      background-color: #64a1b1;
       color: rgba(246, 224, 202, 1);
+      font-family: "Ultra";
       a {
         display: inline-block;
         text-align: center;
@@ -82,6 +89,7 @@ nav {
   transform: translateX(0%) scale(100%);
   transition: all 0.8s ease-out;
   position: absolute;
+  top: 120px;
   left: 0;
   right: 0;
   z-index: 100;

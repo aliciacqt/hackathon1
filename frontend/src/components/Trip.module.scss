@@ -59,7 +59,7 @@
       h2 {
         position: absolute;
         display: flex;
-        right: 150px;
+        right: 10%;
         font-size: 30px;
         color: #c77a4f;
         font-family: "Ultra";
@@ -69,16 +69,16 @@
     article:nth-child(odd) {
       flex-direction: row;
       p {
-        transform: translateX(-470px);
+        transform: translateX(-1000px) scale(0);
         border-radius: 0px 5px 5px 0px;
       }
 
       .visible-text {
-        transform: translateX(0px);
+        transform: translateX(0px) scale(100%);
       }
 
       .active {
-        transform: translateX(0px);
+        transform: translateX(0px) scale(100%);
       }
     }
 
@@ -88,11 +88,11 @@
         box-shadow: -2px 2px 4px 1px rgba(0, 0, 0, 0.51);
       }
       p {
-        transform: translateX(470px);
+        transform: translateX(1000px) scale(0);
         border-radius: 5px 0px 0px 5px;
       }
       .visible-text {
-        transform: translateX(0px);
+        transform: translateX(0px) scale(100%);
       }
     }
 

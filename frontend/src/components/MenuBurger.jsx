@@ -1,4 +1,4 @@
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useState } from "react";
 import "./MenuBurger.scss";
 
@@ -19,7 +19,7 @@ const BurgerMenu = () => {
     }
   };
   return (
-    <div>
+    <div className="bg-blue">
       <nav className="mt-4">
         <div
           className="burger-menu"
@@ -35,13 +35,44 @@ const BurgerMenu = () => {
       </nav>
       <div className={menuClass}>
         <ul>
-          <li>Japon</li>
-          <li>Route 66 </li>
-          <li>Edimbourgh</li>
-          <li>Svalbard</li>
-          <li>Golf du Morbihan</li>
-          <li> Mes prochaines vacances</li>
-          <li> Mes sites web de vacs</li>
+          <Link
+            onClick={updateMenu}
+            onKeyDown={updateMenu}
+            to="/roadtrip/trip/1"
+          >
+            <li>🏯 Japon</li>
+          </Link>
+          <Link
+            onClick={updateMenu}
+            onKeyDown={updateMenu}
+            to="/roadtrip/trip/2"
+          >
+            <li>🏙️ Route 66 </li>
+          </Link>
+          <Link
+            onClick={updateMenu}
+            onKeyDown={updateMenu}
+            to="/roadtrip/trip/3"
+          >
+            <li>🏴󠁧󠁢󠁳󠁣󠁴󠁿 Edimbourgh</li>
+          </Link>
+          <Link
+            onClick={updateMenu}
+            onKeyDown={updateMenu}
+            to="/roadtrip/trip/4"
+          >
+            <li>🐻‍❄️ Svalbard</li>
+          </Link>
+          <Link
+            onClick={updateMenu}
+            onKeyDown={updateMenu}
+            to="/roadtrip/trip/5"
+          >
+            <li>𖣘 Golf du Morbihan</li>
+          </Link>
+          <Link onClick={updateMenu} onKeyDown={updateMenu} to="/suggestions">
+            <li> 🌴 Mes prochaines vacances</li>
+          </Link>
           <li>
             {/* <Link onClick={updateMenu} onKeyDown={updateMenu} to="/planetes">
               PLANÈTES

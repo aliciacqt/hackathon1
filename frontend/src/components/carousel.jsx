@@ -1,5 +1,7 @@
+
 import React, { useState } from "react";
 import images from "../data/ImageData";
+
 import "./carousel.scss";
 
 function Carousel() {
@@ -83,7 +85,7 @@ function Carousel() {
           <img src={images[images.length - 1]} width={200} />
         </div>
       </div>
-
+      
       <div className="buttons">
         <button type="button" id="prev" onClick={() => moveToSelected("prev")}>
           Next
