@@ -1,9 +1,8 @@
-.header {
+/* .header {
   display: flex;
   justify-content: space-between;
-
   background-color: rgba(100, 161, 177, 1);
-}
+} */
 
 .navTitle {
   @apply text-3xl font-medium justify-center;

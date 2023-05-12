@@ -1,6 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 import "./App.scss";
 
+import Presentation from "@components/Presentation";
 // import Form from "./components/Form";
 import RoadTrip from "./pages/RoadTrip";
 import Carousel from "./components/carousel";
@@ -11,6 +12,7 @@ function App() {
   return (
     <main className="App">
       <Header />
+      <Presentation />
       <Carousel />
       {/* <RoadTrip />
       <Form /> */}
