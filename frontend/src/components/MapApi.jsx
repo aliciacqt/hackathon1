@@ -1,14 +1,20 @@
 import React, { useState, useEffect, useRef } from "react";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import PropTypes from "prop-types";
-import "leaflet/dist/leaflet.css";
+import "./MapApi.scss";
 
 function Map({ position }) {
   const defaultZoomLevel = 16;
 
   const [errorMessage, setErrorMessage] = useState(null);
+
   const mapElementRef = useRef(null);
+
   const [currentPosition, setCurrentPosition] = useState(position);
+
+  useEffect(() => {
+    setCurrentPosition(position);
+  }, [position]);
 
   useEffect(() => {
     if (mapElementRef.current) {
@@ -33,17 +39,19 @@ function Map({ position }) {
   }
 
   return (
-    <MapContainer
-      center={currentPosition}
-      zoom={defaultZoomLevel}
-      style={{ height: "400px" }}
-      ref={mapElementRef}
-    >
-      <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
-      <Marker position={currentPosition}>
-        <Popup>Your current position</Popup>
-      </Marker>
-    </MapContainer>
+    <div className="map">
+      <MapContainer
+        center={currentPosition}
+        zoom={defaultZoomLevel}
+        style={{ height: "400px" }}
+        ref={mapElementRef}
+      >
+        <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
+        <Marker position={currentPosition}>
+          <Popup>Your current position</Popup>
+        </Marker>
+      </MapContainer>
+    </div>
   );
 }
 

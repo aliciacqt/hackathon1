@@ -1,9 +1,9 @@
 #carousel {
   position: relative;
   height: 400px;
-  top: 50%;
-  // transform: translateY(-50%);
+  max-width: 100%;
   overflow: hidden;
+  margin-top: 200px;
 }
 
 #carousel div {
@@ -86,8 +86,151 @@
 }
 
 .buttons {
-  position: fixed;
+  position: absolute;
   left: 50%;
+  margin-bottom: 200 px;
   transform: translateX(-50%);
-  bottom: 200px;
+}
+
+.buttons button {
+  background-color: #fff;
+  border: 1px solid #000;
+  padding: 10px 20px;
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+.buttons button:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+@media only screen and (max-width: 768px) {
+  #carousel div img {
+    width: 300px;
+    transition: width 1s;
+    padding-top: 60 px;
+  }
+
+  #carousel div.prev {
+    left: 20%;
+    transform: translateY(50px) translateX(-50%);
+  }
+
+  #carousel div.prev img {
+    width: 250px;
+    transition: width 1s;
+  }
+
+  #carousel div.prevLeftSecond {
+    left: 5%;
+    transform: translateY(50%) translateX(-50%);
+  }
+
+  #carousel div.prevLeftSecond img {
+    width: 150px;
+    transition: width 1s;
+  }
+
+  #carousel div.selected {
+    left: 50%;
+    transform: translateY(0px) translateX(-50%);
+  }
+
+  #carousel div.next {
+    left: 80%;
+    transform: translateY(50px) translateX(-50%);
+  }
+
+  #carousel div.next img {
+    width: 300px;
+    transition: width 1s;
+  }
+
+  #carousel div.nextRightSecond img {
+    width: 150px;
+    transition: width 1s;
+  }
+
+  #carousel div.nextRightSecond img {
+    width: 150px;
+    transition: width 1s;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  #carousel div img {
+    width: 200px;
+    transition: width 1s;
+    padding-top: 60 px;
+  }
+
+  #carousel div.prev {
+    left: 10%;
+    transform: translateY(50px) translateX(-50%);
+  }
+
+  #carousel div.prev img {
+    width: 150px;
+    transition: width 1s;
+  }
+
+  #carousel div.prevLeftSecond {
+    left: -5%;
+    transform: translateY(50%) translateX(-50%);
+    opacity: 0;
+  }
+
+  #carousel div.prevLeftSecond img {
+    width: 5px;
+    transition: width 1s;
+  }
+
+  #carousel div.selected {
+    left: 50%;
+    transform: translateY(0px) translateX(-50%);
+  }
+
+  #carousel div.next {
+    left: 90%;
+    width: 150px;
+    transform: translateY(50px) translateX(-50%);
+  }
+
+  #carousel div.next img {
+    width: 150px;
+    transition: width 1s;
+  }
+
+  #carousel div.nextRightSecond {
+    left: 105%;
+    transform: translateY(50%) translateX(-50%);
+    opacity: 0;
+  }
+
+  #carousel div.nextRightSecond img {
+    width: 100px;
+    transition: width 1s;
+  }
+
+  .buttons {
+    position: absolute;
+    left: 50%;
+    margin-bottom: 200 px;
+    transform: translateX(-50%);
+  }
+
+  .buttons button {
+    background-color: #fff;
+    border: 1px solid #000;
+    padding: 5px 20px;
+    margin-bottom: 90 px;
+    margin: 0 10px;
+    cursor: pointer;
+  }
+
+  .buttons button:hover {
+    background-color: #000;
+    color: #fff;
+  }
 }
